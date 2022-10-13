@@ -1,4 +1,4 @@
 node_modules
 dropped
-
+.env
 package-lock.json

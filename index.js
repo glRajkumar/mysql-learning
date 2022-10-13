@@ -1,6 +1,8 @@
 const express = require('express')
+const connectDB = require('./db')
 
 const app = express()
+connectDB()
 
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
