@@ -1,0 +1,44 @@
+@host = http://localhost:5000/post
+
+### create post table only once
+GET {{host}}/create-post-table
+
+
+### get all post
+GET {{host}}
+
+
+### get post by id
+GET {{host}}/2
+
+
+### get post by id
+GET {{host}}/title/1
+
+
+### 
+POST {{host}}
+Content-Type: application/json
+
+{
+  "title": "Post 1",
+  "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique placeat vel numquam, officiis eaque perferendis cumque a quae quo corrupti incidunt ipsa commodi non assumenda repellendus dolores nemo maxime explicabo."
+}
+
+
+### update post
+PUT {{host}}/2
+Content-Type: application/json
+
+{
+  "title": "Post 1 re-edited",
+  "content": "cont edited"
+}
+
+
+### drop post table
+DELETE {{host}}
+
+
+### delete post by id
+DELETE {{host}}/1
