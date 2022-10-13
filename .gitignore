@@ -2,3 +2,5 @@ node_modules
 dropped
 .env
 package-lock.json
+.vscode
+test.session.sql
