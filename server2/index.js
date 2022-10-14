@@ -1,9 +1,18 @@
 const express = require('express')
+const db = require('./db')
+
+const posts = require('./controllers/post')
 
 const app = express()
 
+db.authenticate()
+  .then(() => console.log("Connected Db"))
+  .catch(err => console.log("Error connecting db", err))
+
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
+
+app.use("/post", posts)
 
 app.use((req, res, next) => {
   const error = new Error('Not Found')
