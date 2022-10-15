@@ -1,21 +1,19 @@
 {
-  "name": "mysql-learn",
+  "name": "server1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "server1": "nodemon server1/index",
-    "server2": "nodemon server2/index"
+    "dev": "nodemon index"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "mysql2": "^2.3.3",
-    "sequelize": "^6.25.1",
-    "sequelize-cli": "^6.5.1"
+    "mysql2": "^2.3.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"

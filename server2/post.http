@@ -6,7 +6,7 @@ GET {{host}}
 
 
 ### get post by id
-GET {{host}}/2
+GET {{host}}/5
 
 
 ### get post by id
