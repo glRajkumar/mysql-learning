@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
     res.send(users)
 
   } catch (error) {
-    res.status(400).json({ err, msg: "" })
+    res.status(400).json({ err, msg: "Cannot get all users" })
   }
 })
 
@@ -23,7 +23,7 @@ router.get("/:id", async (req, res) => {
     res.send(user)
 
   } catch (error) {
-    res.status(400).json({ err, msg: "" })
+    res.status(400).json({ err, msg: "Cannot get user by id" })
   }
 })
 
@@ -35,7 +35,7 @@ router.post("/", async (req, res) => {
     res.send(user)
 
   } catch (error) {
-    res.status(400).json({ err, msg: "" })
+    res.status(400).json({ err, msg: "Cannot create new user" })
   }
 })
 
@@ -50,7 +50,7 @@ router.put("/:id", async (req, res) => {
     res.send(user)
 
   } catch (error) {
-    res.status(400).json({ err, msg: "" })
+    res.status(400).json({ err, msg: "Cannot update user by id" })
   }
 })
 
@@ -62,7 +62,7 @@ router.delete("/:id", async (req, res) => {
     res.send("deleted")
 
   } catch (error) {
-    res.status(400).json({ err, msg: "" })
+    res.status(400).json({ err, msg: "Cannot delete user by id" })
   }
 })
 

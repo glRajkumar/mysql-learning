@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
     res.send(posts)
 
   } catch (error) {
-    res.status(400).json({ err, msg: "" })
+    res.status(400).json({ err, msg: "Cannot get all posts" })
   }
 })
 
@@ -33,7 +33,7 @@ router.get("/:id", async (req, res) => {
     res.send(post)
 
   } catch (error) {
-    res.status(400).json({ err, msg: "" })
+    res.status(400).json({ err, msg: "Cannot get post by id" })
   }
 })
 
@@ -53,7 +53,7 @@ router.get("/title/:id", async (req, res) => {
     res.send(post)
 
   } catch (error) {
-    res.status(400).json({ err, msg: "" })
+    res.status(400).json({ err, msg: "Cannot get post - title by id" })
   }
 })
 
@@ -66,11 +66,11 @@ router.post("/", async (req, res) => {
   //   .catch(err => res.status(400).json({ err, msg: "" }))
 
   try {
-    const posts = await Post.create(data)
-    res.send(posts)
+    const post = await Post.create(data)
+    res.send(post)
 
   } catch (error) {
-    res.status(400).json({ err, msg: "" })
+    res.status(400).json({ err, msg: "Cannot create new post" })
   }
 })
 
@@ -84,13 +84,13 @@ router.put("/:id", async (req, res) => {
   //   .catch(err => res.status(400).json({ err, msg: "" }))
 
   try {
-    const posts = await Post.update(data, {
+    const post = await Post.update(data, {
       where: { id }
     })
-    res.send(posts)
+    res.send(post)
 
   } catch (error) {
-    res.status(400).json({ err, msg: "" })
+    res.status(400).json({ err, msg: "Cannot update post by id" })
   }
 })
 
@@ -107,7 +107,7 @@ router.delete("/:id", async (req, res) => {
     res.send("deleted")
 
   } catch (error) {
-    res.status(400).json({ err, msg: "" })
+    res.status(400).json({ err, msg: "Cannot delete post by id" })
   }
 })
 
