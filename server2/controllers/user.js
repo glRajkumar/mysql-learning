@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
     const users = await User.findAll()
     res.send(users)
 
-  } catch (error) {
+  } catch (err) {
     res.status(400).json({ err, msg: "Cannot get all users" })
   }
 })
@@ -22,7 +22,7 @@ router.get("/:id", async (req, res) => {
     })
     res.send(user)
 
-  } catch (error) {
+  } catch (err) {
     res.status(400).json({ err, msg: "Cannot get user by id" })
   }
 })
@@ -34,7 +34,7 @@ router.post("/", async (req, res) => {
     const user = await User.create(data)
     res.send(user)
 
-  } catch (error) {
+  } catch (err) {
     res.status(400).json({ err, msg: "Cannot create new user" })
   }
 })
@@ -49,7 +49,7 @@ router.put("/:id", async (req, res) => {
     })
     res.send(user)
 
-  } catch (error) {
+  } catch (err) {
     res.status(400).json({ err, msg: "Cannot update user by id" })
   }
 })
@@ -61,7 +61,7 @@ router.delete("/:id", async (req, res) => {
     await User.destroy({ where: { id } })
     res.send("deleted")
 
-  } catch (error) {
+  } catch (err) {
     res.status(400).json({ err, msg: "Cannot delete user by id" })
   }
 })

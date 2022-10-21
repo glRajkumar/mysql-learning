@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
     const comments = await Comment.findAll()
     res.send(comments)
 
-  } catch (error) {
+  } catch (err) {
     res.status(400).json({ err, msg: "Cannot get all comments" })
   }
 })
@@ -22,7 +22,7 @@ router.get("/:id", async (req, res) => {
     })
     res.send(comment)
 
-  } catch (error) {
+  } catch (err) {
     res.status(400).json({ err, msg: "Cannot get comment by id" })
   }
 })
@@ -34,7 +34,7 @@ router.post("/", async (req, res) => {
     const comment = await Comment.create(data)
     res.send(comment)
 
-  } catch (error) {
+  } catch (err) {
     res.status(400).json({ err, msg: "Cannot create new comment" })
   }
 })
@@ -49,7 +49,7 @@ router.put("/:id", async (req, res) => {
     })
     res.send(comment)
 
-  } catch (error) {
+  } catch (err) {
     res.status(400).json({ err, msg: "Cannot update comment by id" })
   }
 })
@@ -61,7 +61,7 @@ router.delete("/:id", async (req, res) => {
     await Comment.destroy({ where: { id } })
     res.send("deleted")
 
-  } catch (error) {
+  } catch (err) {
     res.status(400).json({ err, msg: "Cannot delete comment by id" })
   }
 })
