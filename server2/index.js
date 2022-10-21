@@ -1,7 +1,9 @@
 const express = require('express')
 const db = require('./db')
 
+const users = require('./controllers/user')
 const posts = require('./controllers/post')
+const comments = require('./controllers/comment')
 
 const app = express()
 
@@ -12,7 +14,9 @@ db.authenticate()
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
+app.use("/user", users)
 app.use("/post", posts)
+app.use("/comment", comments)
 
 app.use((req, res, next) => {
   const error = new Error('Not Found')
@@ -29,5 +33,5 @@ app.use((error, req, res, next) => {
   })
 })
 
-const port = process.env.PORT || 5001
+const port = process.env.PORT || 5000
 app.listen(port, () => console.log(`App is running on ${port}`))

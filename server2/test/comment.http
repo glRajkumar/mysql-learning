@@ -1,0 +1,31 @@
+@host = http://localhost:5000/comment
+
+
+### get all comment
+GET {{host}}
+
+
+### get comment by id
+GET {{host}}/5
+
+
+### create comment
+POST {{host}}
+Content-Type: application/json
+
+{
+  "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique placeat vel numquam, officiis eaque perferendis cumque a quae quo corrupti incidunt ipsa commodi non assumenda repellendus dolores nemo maxime explicabo."
+}
+
+
+### update comment by id
+PUT {{host}}/4
+Content-Type: application/json
+
+{
+  "content": "cont edited"
+}
+
+
+### delete comment by id
+DELETE {{host}}/2

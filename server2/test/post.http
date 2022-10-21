@@ -1,4 +1,4 @@
-@host = http://localhost:5001/post
+@host = http://localhost:5000/post
 
 
 ### get all post
@@ -13,7 +13,7 @@ GET {{host}}/5
 GET {{host}}/title/2
 
 
-### 
+### create post
 POST {{host}}
 Content-Type: application/json
 
@@ -23,7 +23,7 @@ Content-Type: application/json
 }
 
 
-### update post
+### update post by id
 PUT {{host}}/4
 Content-Type: application/json
 
