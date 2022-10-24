@@ -6,7 +6,7 @@ GET {{host}}
 
 
 ### get user by id
-GET {{host}}/5
+GET {{host}}/1
 
 
 ### create user
@@ -14,18 +14,18 @@ POST {{host}}
 Content-Type: application/json
 
 {
-  "firstName": "Raj",
+  "firstName": "Vasanth",
   "lastName": "Kumar"
 }
 
 
 ### update user by id
-PUT {{host}}/4
+PUT {{host}}/1
 Content-Type: application/json
 
 {
-  "firstName": "",
-  "lastName": ""
+  "firstName": "Raj",
+  "lastName": "kumar"
 }
 
 

@@ -6,7 +6,7 @@ GET {{host}}
 
 
 ### get comment by id
-GET {{host}}/5
+GET {{host}}/1
 
 
 ### create comment
@@ -19,7 +19,7 @@ Content-Type: application/json
 
 
 ### update comment by id
-PUT {{host}}/4
+PUT {{host}}/1
 Content-Type: application/json
 
 {

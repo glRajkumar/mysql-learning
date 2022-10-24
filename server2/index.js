@@ -11,6 +11,10 @@ db.authenticate()
   .then(() => console.log("Connected Db"))
   .catch(err => console.log("Error connecting db", err))
 
+db.sync()
+  .then(() => console.log("Re-synced"))
+  .catch(err => console.log("Error on re-syncing to db", err))
+
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 

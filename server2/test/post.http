@@ -18,7 +18,7 @@ POST {{host}}
 Content-Type: application/json
 
 {
-  "title": "Post 4",
+  "title": "Post 1",
   "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique placeat vel numquam, officiis eaque perferendis cumque a quae quo corrupti incidunt ipsa commodi non assumenda repellendus dolores nemo maxime explicabo."
 }
 

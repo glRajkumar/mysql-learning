@@ -14,6 +14,8 @@ const Users = db.define("users", {
   lastName: {
     type: Sequelize.STRING
   }
+}, {
+  timestamps: false
 })
 
 module.exports = Users

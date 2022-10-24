@@ -11,6 +11,8 @@ const Comments = db.define("comments", {
   content: {
     type: Sequelize.STRING
   }
+}, {
+  timestamps: false
 })
 
 module.exports = Comments
