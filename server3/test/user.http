@@ -1,0 +1,33 @@
+@host = http://localhost:5002/user
+
+
+### get all user
+GET {{host}}
+
+
+### get user by id
+GET {{host}}/1
+
+
+### create user
+POST {{host}}
+Content-Type: application/json
+
+{
+  "firstName": "Vasanth",
+  "lastName": "Kumar"
+}
+
+
+### update user by id
+PUT {{host}}/1
+Content-Type: application/json
+
+{
+  "firstName": "Raj",
+  "lastName": "kumar"
+}
+
+
+### delete user by id
+DELETE {{host}}/2

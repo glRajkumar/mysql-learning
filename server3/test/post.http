@@ -1,0 +1,33 @@
+@host = http://localhost:5002/post
+
+
+### get all post
+GET {{host}}
+
+
+### get post by id
+GET {{host}}/5
+
+
+### create post
+POST {{host}}
+Content-Type: application/json
+
+{
+  "title": "Post 1",
+  "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique placeat vel numquam, officiis eaque perferendis cumque a quae quo corrupti incidunt ipsa commodi non assumenda repellendus dolores nemo maxime explicabo."
+}
+
+
+### update post by id
+PUT {{host}}/4
+Content-Type: application/json
+
+{
+  "title": "Post 4 edited",
+  "content": "cont edited"
+}
+
+
+### delete post by id
+DELETE {{host}}/2

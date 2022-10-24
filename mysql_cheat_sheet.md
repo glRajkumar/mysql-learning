@@ -120,6 +120,12 @@ DROP TABLE tablename;
 SHOW TABLES;
 ```
 
+# View particular table's properties
+
+```sql
+DESCRIBE tablename;
+```
+
 ## Insert Row / Record
 
 ```sql

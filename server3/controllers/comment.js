@@ -1,5 +1,5 @@
 const express = require('express')
-const Comments = require('../models/Comments')
+const { Comments } = require('../models')
 
 const router = express.Router()
 
