@@ -3,7 +3,7 @@ const { Posts } = require('../models')
 
 const router = express.Router()
 
-// get all post in table
+// get all post in table (just for learning purpose only used)
 router.get("/", async (req, res) => {
   try {
     const posts = await Posts.findAll()
@@ -20,12 +20,28 @@ router.get("/:id", async (req, res) => {
 
   try {
     const post = await Posts.findOne({
-      where: { id }
+      where: { id },
+      include: 'Comments'
     })
     res.send(post)
 
   } catch (error) {
     res.status(400).json({ err, msg: "Cannot get post by id" })
+  }
+})
+
+// get all posts of the users 
+router.get("/user/:userId", async (req, res) => {
+  const { userId: UserId } = req.params
+
+  try {
+    const posts = await Posts.findAll({
+      where: { UserId }
+    })
+    res.send(posts)
+
+  } catch (error) {
+    res.status(400).json({ err, msg: "Cannot get all posts" })
   }
 })
 

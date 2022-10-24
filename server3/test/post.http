@@ -1,12 +1,18 @@
 @host = http://localhost:5002/post
 
+# vasanth - ba8e20b1-f588-49d3-b139-a122bf12d895
+# raj - 068e5923-c7e1-4208-8fbc-44949f6c3270
 
 ### get all post
 GET {{host}}
 
 
 ### get post by id
-GET {{host}}/5
+GET {{host}}/635c9d72-c345-4c38-93fa-508e009a0521
+
+
+### get all posts by userId
+GET {{host}}/user/068e5923-c7e1-4208-8fbc-44949f6c3270
 
 
 ### create post
@@ -14,8 +20,9 @@ POST {{host}}
 Content-Type: application/json
 
 {
-  "title": "Post 1",
-  "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique placeat vel numquam, officiis eaque perferendis cumque a quae quo corrupti incidunt ipsa commodi non assumenda repellendus dolores nemo maxime explicabo."
+  "title": "Post 5",
+  "content": "Lorem ipsum dolor sit.",
+  "UserId": "7d81f71b-dfd1-4941-8269-f8e6cfed73c5"
 }
 
 

@@ -6,7 +6,7 @@ GET {{host}}
 
 
 ### get comment by id
-GET {{host}}/1
+GET {{host}}/b5b94c83-872b-48c1-bbf3-0f7d077923e2
 
 
 ### create comment
@@ -14,7 +14,8 @@ POST {{host}}
 Content-Type: application/json
 
 {
-  "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique placeat vel numquam, officiis eaque perferendis cumque a quae quo corrupti incidunt ipsa commodi non assumenda repellendus dolores nemo maxime explicabo."
+  "content": "Comment 1",
+  "PostId": "635c9d72-c345-4c38-93fa-508e009a0521"
 }
 
 

@@ -13,5 +13,9 @@ module.exports = (sequelize, DataTypes) => {
     },
   })
 
+  Comments.associate = models => {
+    Comments.belongsTo(models.Posts)
+  }
+
   return Comments
 }

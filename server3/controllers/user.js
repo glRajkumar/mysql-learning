@@ -18,7 +18,8 @@ router.get("/:id", async (req, res) => {
 
   try {
     const user = await Users.findOne({
-      where: { id }
+      where: { id },
+      include: "Posts"
     })
     res.send(user)
 
