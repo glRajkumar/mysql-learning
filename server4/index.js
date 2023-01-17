@@ -7,6 +7,10 @@ connectDb()
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
+const user = require('./controllers/user')
+
+app.use("/user", user)
+
 app.use((req, res, next) => {
   const error = new Error('Not Found')
   error.status = 404
