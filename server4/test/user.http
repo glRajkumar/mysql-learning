@@ -6,7 +6,7 @@ GET {{host}}
 
 
 ### get user by id
-GET {{host}}/7d81f71b-dfd1-4941-8269-f8e6cfed73c5
+GET {{host}}/9b083134-23b8-4ea4-84e3-32ea49835898
 
 
 ### create user
@@ -30,4 +30,4 @@ Content-Type: application/json
 
 
 ### delete user by id
-DELETE {{host}}/7d81f71b-dfd1-4941-8269-f8e6cfed73c5
+DELETE {{host}}/9b083134-23b8-4ea4-84e3-32ea49835898

@@ -8,8 +8,10 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
 const user = require('./controllers/user')
+const post = require('./controllers/post')
 
 app.use("/user", user)
+app.use("/post", post)
 
 app.use((req, res, next) => {
   const error = new Error('Not Found')

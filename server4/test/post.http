@@ -1,0 +1,37 @@
+@host = http://localhost:5003/post
+
+### get all post
+GET {{host}}
+
+
+### get post by id
+GET {{host}}/850361cb-bb78-46f9-a444-d5d0bb76ce6d
+
+
+### get all posts by userId
+GET {{host}}/user/9b083134-23b8-4ea4-84e3-32ea49835898
+
+
+### create post
+POST {{host}}
+Content-Type: application/json
+
+{
+  "title": "Post 1",
+  "content": "Lorem ipsum dolor sit.",
+  "UserId": "9b083134-23b8-4ea4-84e3-32ea49835898"
+}
+
+
+### update post by id
+PUT {{host}}/4
+Content-Type: application/json
+
+{
+  "title": "Post 1 edited",
+  "content": "cont edited"
+}
+
+
+### delete post by id
+DELETE {{host}}/9b083134-23b8-4ea4-84e3-32ea49835898
