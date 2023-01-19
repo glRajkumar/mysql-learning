@@ -9,12 +9,16 @@ GET {{host}}
 GET {{host}}/9b083134-23b8-4ea4-84e3-32ea49835898
 
 
+### get user's posts by id
+GET {{host}}/9b083134-23b8-4ea4-84e3-32ea49835898
+
+
 ### create user
 POST {{host}}
 Content-Type: application/json
 
 {
-  "firstName": "Vasanth",
+  "firstName": "Raj",
   "lastName": "Kumar"
 }
 

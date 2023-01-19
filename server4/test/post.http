@@ -9,7 +9,7 @@ GET {{host}}/850361cb-bb78-46f9-a444-d5d0bb76ce6d
 
 
 ### get all posts by userId
-GET {{host}}/user/9b083134-23b8-4ea4-84e3-32ea49835898
+GET {{host}}/user/bd4294a4-fa76-4439-b3dd-b25b38e1a5d8
 
 
 ### create post
@@ -19,7 +19,7 @@ Content-Type: application/json
 {
   "title": "Post 1",
   "content": "Lorem ipsum dolor sit.",
-  "UserId": "9b083134-23b8-4ea4-84e3-32ea49835898"
+  "UserId": "bd4294a4-fa76-4439-b3dd-b25b38e1a5d8"
 }
 
 
