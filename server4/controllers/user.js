@@ -27,21 +27,6 @@ router.get("/:id", async (req, res) => {
   }
 })
 
-router.get("/posts/:id", async (req, res) => {
-  const { id } = req.params
-
-  try {
-    const user = await Users.findOne({
-      where: { id },
-      include: "Posts"
-    })
-    res.send(user)
-
-  } catch (err) {
-    res.status(400).json({ err, msg: "Cannot get user by id" })
-  }
-})
-
 router.post("/", async (req, res) => {
   const data = req.body
 
